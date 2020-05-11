@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-       Welcome to GK Technology
+      <h3> Welcome to GK Technology</h3>
+      <br />
+       <a href="redirectupload">Click here to upload your Image/File</a>
 </body>
 </html>

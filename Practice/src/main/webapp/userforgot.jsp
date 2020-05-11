@@ -36,23 +36,25 @@ margin: 20px;}
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Login Form</title>
+<title>Forgot Form</title>
 <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
 <div class="container margin">
-<h1 class="header">LOGIN FORM</h1>
-	<form action="login">
+<h1 class="header">Forgot Password</h1>
+	<form action="forGot">
 		<div class="labels">
-		<label for="email">UserName/Email:<input type="text" required placeholder="Email Id" name="email" /></label>
+		<label for="pancard">PanCard:<input type="text" required placeholder="Pan Card" name="pancard" /></label>
+		<p>[It contains (5 upper case letter) (4 number )and (1uppper case letter )]</p>
 		</div>
 		<div class="labels">
-		<label for="pass">Password:<input type="password" required placeholder="Password" name="pass" /></label>
-		<p>[It contains (4 uppper case letter) (1 special ch )and (3 number)]</p>
-		</div>
-		<div class="g-recaptcha margin" data-sitekey="6LcHqPUUAAAAAKPqQuYcWV6dqOevmlVaPHK9-jHk"></div><br>
-		<input type="submit" value="Login" /><br>
+		<label for="mobnumber">Mobile_no:<input type="text" required placeholder="Mobile no" name="mobnumber" /></label>
 		
+		</div>
+		<div class="labels">
+		<label for="pass">New Password:<input type="password" required placeholder="Password" name="pass" /></label>
+		</div>
+		<input type="submit" value="Forgot password" />
 	</form>
 </div>
 </body>

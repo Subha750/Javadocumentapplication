@@ -7,11 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
- <h4> UserName or Password has wrong ,please try again!!!!!</h4><br>
-  <a href="move">Click here for Relogin</a>
-  <form action="userforgot.jsp">
-  <input type="submit" value="FORGOT PASSWORD"/>
-  
-  </form>
+   <h1>You are successfully Logedout</h1>
+   
+   <table>
+   <tr>
+  <td> <a href="move">Login Employee</a></td>
+  </tr>
+  <tr>
+  <td><a href="regmove">Employee Registration</a></td>
+  </tr>
+</table>
+
+
 </body>
 </html>

@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
 <h1>Registration Form</h1>
@@ -28,8 +29,11 @@
          </tr>
          <tr>  
           <td>Password :</td>  
-          <td><input type="text" name="pword" /></td>
-         </tr>  
+          <td><input type="text" name="pword" />[It contains (4 uppper case letter) (1 special ch )and (3 number)]</td>
+         </tr> 
+         </table>
+         <div class="g-recaptcha" data-sitekey="6LcHqPUUAAAAAKPqQuYcWV6dqOevmlVaPHK9-jHk"></div><br>
+         <table>
          <tr>  
           <td> </td>  
           <td><input type="submit" value="Click To Submit" /></td>  	

@@ -51,8 +51,7 @@ margin: 20px;}
 		<p>[It contains (4 uppper case letter) (1 special ch )and (3 number)]</p>
 		</div>
 		<div class="g-recaptcha margin" data-sitekey="6LcHqPUUAAAAAKPqQuYcWV6dqOevmlVaPHK9-jHk"></div><br>
-		<input type="submit" value="Login" /><br>
-		
+		<input type="submit" value="Login" />
 	</form>
 </div>
 </body>
