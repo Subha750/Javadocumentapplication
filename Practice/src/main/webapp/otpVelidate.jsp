@@ -144,31 +144,14 @@ to {
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-hidden="true">&times;</button>
-					<h4 class="modal-title" id="myModalLabel">Forgot Password</h4>
+					<h4 class="modal-title" id="myModalLabel">OTP Validation</h4>
 				</div>
 				<div class="modal-body">
-					<form action="forGot">
-						<div class="labels">
-							<label for="pancard">PanCard:<input type="text" required
-								placeholder="Pan Card" name="pancard" /></label>
-							<p>[It contains (5 upper case letter) (4 number )and (1uppper
-								case letter )]</p>
-						</div>
-						<div class="labels">
-							<label for="mobnumber">Mobile_no:<input type="text"
-								required placeholder="Mobile no" name="mobnumber" /></label>
+					<form action="otpvalidate">
 
-						</div>
-						<div class="labels">
-							<label for="pass">New Password:<input type="password"
-								required placeholder="Password" name="pass" /></label>
-						</div>
-						<div class="labels">
-							<label for="confirmpass">Confirm Password:<input
-								type="password" required placeholder="Confirm password"
-								name="confirmpass" /></label>
-						</div>
-						<input type="submit" value="Update" />
+						<input type="number" placeholder="Enter OTP" name="otp" required><br>
+						<button type="submit">Validate</button>
+
 					</form>
 					Please Enter your OTP before Validate.
 				</div>

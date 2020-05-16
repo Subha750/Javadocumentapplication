@@ -8,7 +8,7 @@
 </head>
 <body>
 <h2> You are Registered successfully</h2><br>
-<h3>Welcome ${data} ,please login now for next process</h3><br>
+<h3>You are welcome ,please login now for next process</h3><br>
 
   <a href="move">Click to login</a>
   

@@ -1,7 +1,6 @@
 package com.bean;
 
-public class Userdata 
-{
+public class Userdata {
 //private String username;
 //private String pancard;
 //private int mobnumber;
@@ -42,19 +41,23 @@ public class Userdata
 //	return "Userdata [username=" + username + ", pancard=" + pancard + ", mobnumber=" + mobnumber + ", Email=" + Email
 //			+ ", pword=" + pword + "]";
 //}
-private String uname;
-private String pass;
-public String getUname() {
-	return uname;
-}
-public void setUname(String uname) {
-	this.uname = uname;
-}
-public String getPass() {
-	return pass;
-}
-public void setPass(String pass) {
-	this.pass = pass;
-}
+	private String uname;
+	private String pass;
+
+	public String getUname() {
+		return uname;
+	}
+
+	public void setUname(String uname) {
+		this.uname = uname;
+	}
+
+	public String getPass() {
+		return pass;
+	}
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
 
 }

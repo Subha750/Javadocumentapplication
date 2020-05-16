@@ -10,7 +10,7 @@
                                                           <a href="logout">Logout</a>
 <p>
 How to check a specific duplicate 2nd ocurance to replace anather character? <br>
-
+<code>
 class Test {
 	public static void main(String[] args) {
 		String a = "amitad vdansa nkadna";
@@ -33,7 +33,9 @@ class Test {
 		
 
 	}}
-}</p>
+}
+</code>
+</p>
 
 
 </body>

@@ -1,59 +1,222 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap" rel="stylesheet">
-<style>
-
-body{
-	background-color:#f5efed;
-}
-.container{
-font-family: 'Jost', sans-serif;
-text-align:center;
-font-size:15px;
-border: 1px solid white;
-padding:10px 10px;
-background-color:#f5a742;
-margin:15% auto
-}
-.header{
-font-size:20px;
-}
-input[type="submit"] {
-    background-color: blue;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-transform: uppercase;
-}
-.margin{
-margin:0 auto;
-max-width:50%
-}
-.labels{
-margin: 20px;}
-</style>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Login Form</title>
 <script src="https://www.google.com/recaptcha/api.js"></script>
+<link
+	href="https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap"
+	rel="stylesheet">
+<!-- Add icon library -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+	background-color: #457fd1;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: #d145b7;
+	cursor: pointer;
+	width: 100%;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+	position: relative;
+}
+
+img.avatar {
+	width: 40%;
+	border-radius: 50%;
+}
+
+.container {
+	padding: 16px;
+}
+
+/*icon */
+.icon {
+	padding: 10px;
+	background: none;
+	color: blue;
+	min-width: 5px;
+	text-align: center;
+}
+
+span.psw {
+	float: right;
+	padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto;
+	/* 5% from the top, 15% from the bottom and centered #fefefe*/
+	border: 1px solid #888;
+	width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+	position: absolute;
+	right: 25px;
+	top: 0;
+	color: #000;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: red;
+	cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s
+}
+
+@
+-webkit-keyframes animatezoom {
+	from {-webkit-transform: scale(0)
+}
+
+to {
+	-webkit-transform: scale(1)
+}
+
+}
+@
+keyframes animatezoom {
+	from {transform: scale(0)
+}
+
+to {
+	transform: scale(1)
+}
+
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+	span.psw {
+		display: block;
+		float: none;
+	}
+	.cancelbtn {
+		width: 100%;
+	}
+}
+</style>
 </head>
 <body>
-<div class="container margin">
-<h1 class="header">LOGIN FORM</h1>
-	<form action="login">
-		<div class="labels">
-		<label for="email">UserName/Email:<input type="text" required placeholder="Email Id" name="email" /></label>
-		</div>
-		<div class="labels">
-		<label for="pass">Password:<input type="password" required placeholder="Password" name="pass" /></label>
-		<p>[It contains (4 uppper case letter) (1 special ch )and (3 number)]</p>
-		</div>
-		<div class="g-recaptcha margin" data-sitekey="6LcHqPUUAAAAAKPqQuYcWV6dqOevmlVaPHK9-jHk"></div><br>
-		<input type="submit" value="Login" /><br>
-		
-	</form>
-</div>
+
+	<h2>Login Form</h2>
+
+	<button onclick="document.getElementById('id01').style.display='block'"
+		style="width: auto;">Login</button>
+
+	<div id="id01" class="modal">
+
+		<form class="modal-content animate" action="login">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id01').style.display='none'"
+					class="close" title="Close Modal">&times;</span> <img
+					src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar"
+					class="avatar">
+			</div>
+
+			<div class="container">
+				<label for="email"><b>Username</b></label> <i
+					class="fa fa-user icon"></i> <input type="text"
+					placeholder="Enter Email" name="email" autocomplete="on" required>
+
+				<label for="psw"><b>Password</b></label> <i class="fa fa-key icon"></i>
+				<input type="password" name="pass" required>
+				<p>[It contains (4 uppper case letter) (1 special ch )and (3
+					number)]</p>
+				<button type="submit">Login</button>
+				<label> <input type="checkbox" checked="checked" required
+					name="remember"> Remember me
+				</label>
+			</div>
+
+			<div class="container" style="background-color: #f1f1f1">
+				<button type="button"
+					onclick="document.getElementById('id01').style.display='none'"
+					class="cancelbtn">Cancel</button>
+				<span class="psw">Forgot <a href="userforgot.jsp">password?</a></span>
+			</div>
+			<div class="container signin">
+				<p>
+					If don't have an account? <a href="registration.jsp">SignUp</a>.
+				</p>
+			</div>
+			<div class="g-recaptcha margin"
+				data-sitekey="6LcHqPUUAAAAAKPqQuYcWV6dqOevmlVaPHK9-jHk"></div>
+			<br>
+		</form>
+	</div>
+
+
+	<script>
+		// Get the modal
+		var modal = document.getElementById('id01');
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
 </body>
 </html>
+

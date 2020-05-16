@@ -63,7 +63,7 @@ public class EmailValidation {
 		/// =============================================================
 			public boolean checkpassword(String s)
 			{
-				String regex = "[A-Z]{4}[$&+,:;=?@#|'<>.^*()%!-]{1}[0-9]{3}";
+				String regex = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8}";
 				 
 				Pattern pattern = Pattern.compile(regex);
 				 

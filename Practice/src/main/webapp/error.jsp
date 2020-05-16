@@ -8,9 +8,9 @@
 </head>
 <body>
  <h4> UserName or Password has wrong ,please try again!!!!!</h4><br>
-  <a href="move">Click here for Relogin</a>
-  <form action="userforgot.jsp">
-  <input type="submit" value="FORGOT PASSWORD"/>
+  
+   <form action="login.jsp">
+  <input type="submit" value="Re-Login"/>
   
   </form>
 </body>
