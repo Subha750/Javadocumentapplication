@@ -32,9 +32,10 @@ public class JujuController {
 	EmailValidation emailv = new EmailValidation();
 	DaoController dao = new DaoController();
 	String Pancards = " ";
-
+	
 	@RequestMapping("/move")
-	public String relogin() {
+	public String relogin() 
+	{
 		return "login.jsp";
 	}
 
@@ -47,7 +48,10 @@ public class JujuController {
 
 	@RequestMapping("/register")
 
-	public ModelAndView Register(HttpServletRequest req, HttpServletResponse res) {
+	public ModelAndView Register(HttpServletRequest req, HttpServletResponse res) 
+	
+	{
+		System.out.println();
 		String uname = req.getParameter("uname");
 		String pancard = req.getParameter("pancard");
 		String mobnumber = req.getParameter("mobnumber");
@@ -60,7 +64,8 @@ public class JujuController {
 
 		try {
 			if (emailv.checkEmail(Email) == true && emailv.CheckPannumber(pancard) == true
-					&& emailv.checkpassword(pword) == true && emailv.checkMobile(mobnumber) == true) {
+					&& emailv.checkpassword(pword) == true && emailv.checkMobile(mobnumber) == true) 
+			{
 				System.out.println("Email,pan,password,mobile successfully validated");
 
 				/// OTP
@@ -123,7 +128,8 @@ public class JujuController {
 				dao.create(uname, pancard, mobnumber, Email, pword, otp);
 			}
 
-		} catch (Exception e) {
+		} catch (Exception e) 
+		{
 			e.printStackTrace();
 		}
 
@@ -144,6 +150,7 @@ public class JujuController {
 	/// otp validate then registation successful
 
 	@RequestMapping("/otpvalidate")
+	
 	public ModelAndView Otpdata(HttpServletRequest req, HttpServletResponse res) {
 
 		int userotp = Integer.parseInt(req.getParameter("otp"));
@@ -188,7 +195,8 @@ public class JujuController {
 	/// redirect to fileup jsp page
 
 	@RequestMapping("/redirectupload")
-	public String redirectupload() {
+	public String redirectupload() 
+	{
 		return "fileup.jsp";
 	}
 
@@ -257,6 +265,7 @@ public class JujuController {
 		}
 
 		return new ModelAndView("finalpage.jsp");
+		
 	}
 
 }
